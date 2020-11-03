@@ -29,3 +29,10 @@ dict[0]=$op1
 dict[1]=$op2
 dict[2]=$op3
 dict[3]=$op4
+
+#Read the values from Dictionary to Array
+declare -a arr
+for (( i=0; i<4; i++))
+do
+        arr[i]=${dict[$i]}
+done
