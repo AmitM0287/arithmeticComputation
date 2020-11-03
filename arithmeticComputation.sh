@@ -22,3 +22,10 @@ echo "op3 : c+a/b = " $op3
 #op4 : Compute a%b+c
 op4=`expr $a % $b + $c`
 echo "op4 : a%b+c = " $op4
+
+#Store all results in Dictonary
+declare -A dict
+dict[0]=$op1
+dict[1]=$op2
+dict[2]=$op3
+dict[3]=$op4
