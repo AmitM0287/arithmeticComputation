@@ -36,3 +36,21 @@ for (( i=0; i<4; i++))
 do
         arr[i]=${dict[$i]}
 done
+
+echo
+#Sort the Computation result in Descending Order
+arrSize=${#arr[@]}
+for (( i=0; i<$arrSize-1; i++ ))
+do
+        for (( j=0; j<$arrSize-1-i; j++ ))
+        do
+                if (( ${arr[j]} < ${arr[j+1]} ))
+                then
+                        arr[j]=`expr ${arr[j]} + ${arr[j+1]}`
+                        arr[j+1]=`expr ${arr[j]} - ${arr[j+1]}`
+                        arr[j]=`expr ${arr[j]} - ${arr[j+1]}`
+                fi
+        done
+done
+echo "Computation result in Descending order :"
+echo ${arr[@]}
