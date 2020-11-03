@@ -10,3 +10,7 @@ echo
 #op1 : Compute a+b*c
 op1=`expr $a + $b \* $c`
 echo "op1 : a+b*c = " $op1
+
+#op2 : Compute a*b+c
+op2=`expr $a \* $b + $c`
+echo "op2 : a*b+c = " $op2
