@@ -18,3 +18,7 @@ echo "op2 : a*b+c = " $op2
 #op3 : Compute c+a/b
 op3=`expr $c + $a / $b`
 echo "op3 : c+a/b = " $op3
+
+#op4 : Compute a%b+c
+op4=`expr $a % $b + $c`
+echo "op4 : a%b+c = " $op4
